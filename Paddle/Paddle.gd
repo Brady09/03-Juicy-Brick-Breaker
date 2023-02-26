@@ -29,3 +29,6 @@ func powerup(payload):
 		if c.type == payload.type:
 			c.queue_free()
 	$Powerups.call_deferred("add_child", payload)
+	var paddle_sound = get_node_or_null("/root/Game/Paddle_Sound")
+	if paddle_sound != null:
+		paddle_sound.play()

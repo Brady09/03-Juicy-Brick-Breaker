@@ -41,3 +41,6 @@ func die():
 			var powerup = Powerup.instance()
 			powerup.position = position
 			Powerup_Container.call_deferred("add_child", powerup)
+	var brick_sound = get_node_or_null("/root/Game/Brick_Sound")
+	if brick_sound != null:
+		brick_sound.play()
